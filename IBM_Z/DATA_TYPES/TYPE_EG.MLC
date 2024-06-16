@@ -1,0 +1,17 @@
+*****************************************************
+* Assembler Data Types                              *
+*****************************************************
+TYPEEG SUBENTRY         housekeeping collapsed in macro
+    LG 9,=FL8'73'       place binary 73 into R9
+    LG 10,=PL8'73'      place decimal 73 into R10
+    LG 11,=CL8'ABC'     place characters 'ABC' into R11
+
+    SNAP PDATA=GPR      show register contents in output
+    SUBEXIT             housekeeping collapsed in macro
+
+FULLINT DC F'23'        32-bit two's complement integer
+PACKDC  DC P'123456'    packed decimal
+NEGPACK DC P'-1234.56'  negative packed decimal
+STR     DC C'Hi, Mom!'  EBCDIC characters
+        LTORG           place literal pool table here
+        END
